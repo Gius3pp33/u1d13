@@ -35,19 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
       //Aggiungo un event listener al form per gestire l'invio del nuovo task,quando il form viene inviato
       event.preventDefault(); // Impedisco di ricaricare la pagina
 
-      const taskText = taskInput.value.trim(); // qui col trim() levo la possibilità di inviare spazi vuoti
+      const taskText = taskInput.value.trim(); // qui prendo il valore dell'input con value e col trim() levo la possibilità di inviare spazi vuoti
+      console.log("eccolo"); // appena premo il bottone posso vedere dal console.log questo "eccolo" sulla console
       if (taskText !== "") {
         // qui controllo se il campo input non sia vuoto
         addTask(taskText); // se il campo non è vuoto,chiamo la funzione addTask per aggiungere il nuovo task alla lista
       }
     });
 
-  addTaskBtn.addEventListener("click", function () {
-    //qui aggiungo un eventListener anche al pulsante per aggiungere un task, con lo stesso comportamento del form.
-    const taskText = taskInput.value.trim();
-    if (taskText !== "") {
-      // do la condizione per controllare se il testo dela task non sia vuoto,se non lo è mi aggiunge il nuovo task
-      addTask(taskText);
-    }
-  });
+ 
 });
